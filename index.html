@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Archive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <style>
+        #spinner{
+            display: none;
+        }
+    
+        .load{
+            height: 15px;
+            width: 15px;
+            margin: 2px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h2 class="text-center text-success m-3">Book Archive</h2>
+    <!-- Search Field and Search  -->
+    <section>
+        <div id="search-box" class="input-group mb-3 mx-auto w-25">
+            
+            <input id="search-field" type="text" class="form-control" placeholder="Search Your Favorite Book" aria-label="Search Your Favorite Book" aria-describedby="button-addon2">
+
+            <button onclick="searchBook()" id="search-btn" class="btn btn-outline-secondary" type="button">search</button>
+
+        </div>
+    </section>
+    <!-- Search Field and Search  -->
+
+    <section>
+        <!-- Spinner -->
+        <div id="spinner" class="text-center">
+            
+            <div class="spinner-border load" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            
+            <div class="spinner-grow text-danger load" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow text-primary load" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-border load" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow text-primary load" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            
+            <div class="spinner-grow text-success load" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            
+            <div class="spinner-border load" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Total Book Counter  -->
+        <div id="counter-list" class="text-center my-5">
+
+        </div>
+        <!-- Total Book Counter  -->
+        
+
+        <!-- Book List and Error Message Slot -->
+        <div id="book-list" class="m-5">
+
+            <div id="error-Message">
+
+            </div>
+
+            <div id="search-result" class="row row-cols-1 row-cols-md-4 g-4 mx-auto">
+                
+            </div>
+        </div>
+        <!-- Book List and Error Message Slot -->
+
+    </section>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
